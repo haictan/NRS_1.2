@@ -1,0 +1,91 @@
+#所有字符串唯一
+str_state_layout = 'state_show'
+str_state_title = 'app_title'
+str_state_busy = 'state_busy'
+str_state_mode = 'state_mode'
+str_state_time = 'state_time'
+str_state_logo = 'state_logo'
+
+str_state_mode_layout = 'mode_layout'
+str_state_title_layout = 'title_layout'
+
+str_state_floating_menu = 'floating_menu'
+str_state_floating_button_bar = 'floating_button_statebar'
+str_state_floating_button_lan = 'floating_button_language'
+str_welcome_floating_button_enter = 'floating_button_enter'
+str_welcome_floating_button_exit = 'floating_button_exit'
+
+str_state_interval = 'interval_component'
+
+str_menu_buttongroup = 'menu_button_group'
+str_menu_welcome = 'menu_button_welcome'
+str_menu_principle = 'menu_button_principle'
+str_menu_adjust = 'menu_button_adjust'
+str_menu_measure = 'menu_button_measure'
+str_menu_device = 'menu_button_device'
+str_menu_read = 'menu_button_read'
+str_menu_game = 'menu_button_game'
+str_menu_data = 'menu_button_data'
+
+str_menu_button_group_layout = 'button_group_layout'
+
+str_ctr_slider_rings_store = 'control_slider_rings_store'
+str_ctr_slider_interval = 'control_slider_interval'
+str_ctr_slider_wavelength = 'control_slider_wavelength'
+str_ctr_slider_radius_curvature = 'control_slider_radius_curvature'
+str_ctr_slider_refractive_index = 'control_slider_refractive_index'
+str_ctr_slider_interference_range = 'control_slider_interference_range'
+str_ctr_slider_reflector_angle = 'control_slider_reflector_angle'
+str_ctr_slider_eyepiece_height = 'control_slider_eyepiece_height'
+str_ctr_slider_micrometer_value = 'control_slider_micrometer_value'
+
+str_ctr_aux_button_func_reste = 'reset'
+str_ctr_aux_button_func_destray = 'de-stray'
+str_ctr_aux_button_func_angle = 'best_angle'
+str_ctr_aux_button_func_height = 'best_height'
+
+str_ctr_aux_button_light_na = 'light_source_na'
+str_ctr_aux_button_light_he = 'light_source_he'
+str_ctr_aux_button_light_bld = 'light_source_blue_laser_diodes'
+str_ctr_aux_button_light_ghg = 'light_source_green_hg'
+
+str_ctr_aux_button_medium_space = 'medium_space'
+str_ctr_aux_button_medium_water= 'medium_water'
+str_ctr_aux_button_medium_glass= 'medium_glass'
+str_ctr_aux_button_medium_sapphire = 'sapphire'
+
+str_ctr_measure_button_0_add = 'measure_button_0_add'
+str_ctr_measure_button_0_de = 'measure_button_0_de'
+str_ctr_measure_button_00_add = 'measure_button_00_add'
+str_ctr_measure_button_00_de = 'measure_button_00_de'
+str_ctr_measure_button_000_add = 'measure_button_000_add'
+str_ctr_measure_button_000_de = 'measure_button_000_de'
+str_ctr_measure_button_reset = 'measure_button_reset'
+str_ctr_measure_button_value_display = 'measure_button_value_display'
+
+str_ctr_aux_slider_resolution = 'control_aux_slider_resolution'
+
+str_state_slider_wavelength = 'state_control_slider_wavelength'
+str_state_slider_radius_curvature = 'state_control_slider_radius_curvature'
+str_state_slider_refractive_index = 'state_control_slider_refractive_index'
+str_state_slider_interference_range = 'state_control_slider_interference_range'
+str_state_slider_reflector_angle = 'state_control_slider_reflector_angle'
+str_state_slider_eyepiece_height = 'state_control_slider_eyepiece_height'
+str_state_slider_micrometer_value = 'state_control_slider_micrometer_value'
+
+str_workspace = 'workspace'
+str_rings = 'adjust_newton_rings'
+str_rings_mid_line = 'rings_mid_line'
+str_microscope_diagram = 'microscope_diagram'
+str_micrometer_diagram = 'micrometer_diagram'
+
+str_device_microscope_eyepiece = 'microscope_eyepiece'
+str_device_microscope_reflector = 'microscope_relfector'
+str_device_microscope_drum = 'microscope_drum'
+str_device_lighter = 'lighter'
+
+str_device_video = 'device_video'
+
+str_datasheet_measure = 'datasheet_measure'
+str_datasheet_analysis = 'datasheet_analysis'
+str_datasheet_system = 'datasheet_system'

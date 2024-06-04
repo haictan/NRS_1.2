@@ -1,0 +1,8 @@
+__pycache__/
+node_modules/
+NRSenv/
+NRSexc/
+dist/
+build/
+templates/__pycache__/
+package-lock.json
