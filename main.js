@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron');
-const { execFile } = require('child_process');
+const { spawn } = require('child_process');
 const path = require('path');
 
 let dashProcess;
@@ -21,7 +21,7 @@ function createWindow() {
     mainWindow.on('closed', () => {
         mainWindow = null;
         if (dashProcess) {
-            dashProcess.kill();
+            dashProcess.kill('SIGTERM');
         }
     });
 }
@@ -32,26 +32,33 @@ function startDashProcess() {
         exePath = path.join(__dirname, 'NRSexc', 'NRS.exe');
     } else if (process.platform === 'darwin') {
         exePath = path.join(__dirname, 'NRSexc', 'NRS');
+    } else {
+        exePath = path.join(__dirname, 'NRSexc', 'NRS'); // Linux or other platforms
     }
 
-    dashProcess = execFile(exePath, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`execFile error: ${error.message}`);
-            return;
-        }
-        console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
+    dashProcess = spawn(exePath);
+
+    dashProcess.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+    });
+
+    dashProcess.stderr.on('data', (data) => {
+        console.error(`stderr: ${data}`);
+    });
+
+    dashProcess.on('close', (code) => {
+        console.log(`Dash process exited with code ${code}`);
     });
 }
 
 app.on('ready', () => {
     startDashProcess();
-    setTimeout(createWindow, 1000);
+    setTimeout(createWindow, 1000); // Delay to ensure Dash server is up
 });
 
 app.on('window-all-closed', () => {
     if (dashProcess) {
-        dashProcess.kill();
+        dashProcess.kill('SIGTERM');
     }
     app.quit();
 });
@@ -64,20 +71,20 @@ app.on('activate', () => {
 
 app.on('before-quit', () => {
     if (dashProcess) {
-        dashProcess.kill();
+        dashProcess.kill('SIGTERM');
     }
 });
 
 process.on('SIGTERM', () => {
     if (dashProcess) {
-        dashProcess.kill();
+        dashProcess.kill('SIGTERM');
     }
     app.quit();
 });
 
 process.on('SIGINT', () => {
     if (dashProcess) {
-        dashProcess.kill();
+        dashProcess.kill('SIGTERM');
     }
     app.quit();
 });
@@ -85,7 +92,7 @@ process.on('SIGINT', () => {
 process.on('uncaughtException', (error) => {
     console.error('Uncaught Exception:', error);
     if (dashProcess) {
-        dashProcess.kill();
+        dashProcess.kill('SIGTERM');
     }
     app.quit();
 });
