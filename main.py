@@ -32,5 +32,5 @@ workspace.register_callbacks(app)
 
 if __name__ == '__main__':
     #app.run_server(host='192.168.1.104', port=8866, debug=False)
-    #app.run_server(debug=True)
-    app.run_server()
+    app.run_server(debug=True)
+    #app.run_server()

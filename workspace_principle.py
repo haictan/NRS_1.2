@@ -25,7 +25,7 @@ def create_layout():
     pic_geomatric = html.Div(
         [
             html.Img(src=ms.img_principle_geomatric, style=ss.img_style),
-            html.H2('图3 ', style=ss.img_title_style),
+            html.H2('图3 几何关系示意图', style=ss.img_title_style),
         ]
     )
  
