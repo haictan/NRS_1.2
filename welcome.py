@@ -9,7 +9,7 @@ import statebar
 def create_layout():
     img_cover = html.Img(
     src=ms.img_cover,
-    style={'position': 'absolute','left': '0px','top': '0px','width': '1300px', 'height':'1000px', 'z-index': '1'}
+    style={'position': 'absolute','left': '0px','top': '0px','width': '1600px', 'height':'1000px', 'z-index': '1'}
     )
 
     floating_button_enter = dbc.Button(
