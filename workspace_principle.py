@@ -29,15 +29,20 @@ def create_layout():
         ]
     )
  
+    tips_1 = html.Div(
+        dcc.Markdown(ps.principle_tips_1),
+        style={}
+    )
+
     layout = html.Div(
         [
             html.H2('干涉现象与牛顿环的形成', style={'marginTop': '15px'}),
             dbc.Row(gen),
             dbc.Row([
                         dbc.Col([pic_light,]),
-                        dbc.Col([pic_rins,])
+                        dbc.Col(dcc.Markdown(ps.principle_tips_1), width=2),
+                        dbc.Col([pic_geomatric ,])
                     ],),
-            dbc.Row(dcc.Markdown(ps.principle_tips)),
             html.Hr(style=ss.principle_line_style),
             html.H2('牛顿环干涉测量透镜曲率半径'),
             dbc.Row([

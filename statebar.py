@@ -106,7 +106,7 @@ def create_layout():
 
     floating_menu = html.Div(
         [
-            floating_button_bar,
+            #floating_button_bar,
             #floating_button_lan
         ],
         id=id.str_state_floating_menu
