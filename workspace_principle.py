@@ -5,7 +5,6 @@ import media_source as ms
 import principle_string as ps
 
 def create_layout():
-    gen = dcc.Markdown(ps.principle_intro),
 
     pic_light = html.Div(
         [
@@ -14,7 +13,7 @@ def create_layout():
         ]
     )
 
-    pic_rins = html.Div(
+    pic_rings = html.Div(
         [
             html.Img(src=ms.img_principle_rings_pattern, style=ss.img_style),
             html.H2('图2 牛顿环图样', style=ss.img_title_style),
@@ -31,31 +30,87 @@ def create_layout():
  
     tips_1 = html.Div(
         dcc.Markdown(ps.principle_tips_1),
-        style={}
+        style={
+            'border': '2px solid #4477AA',  # 添加蓝色边框
+            'text-align': 'justify',    # 文字两端对齐
+            'color': '#4477AA',            # 文字变成蓝色
+            'padding': '10px',
+            'padding-bottom': '0px'
+        }
+    )
+
+    tip_2 = html.Div(
+        dcc.Markdown(ps.principle_tips_2),
+        style={
+            'border': '2px solid #4477AA',  # 添加蓝色边框
+            'text-align': 'justify',    # 文字两端对齐
+            'color': '#4477AA',            # 文字变成蓝色
+            'padding': '10px',
+            'padding-bottom': '0px'
+        }
+    )
+
+    tip_3 = html.Div(
+        dcc.Markdown(ps.principle_tips_3),
+        style={
+            'border': '2px solid yellow',
+            'text-align': 'justify',    
+            #'color': 'yellow', 
+            'padding': '10px',
+            'padding-bottom': '0px'
+        }
+    )
+
+    intro = html.Div(
+        dcc.Markdown(ps.principle_intro),
+        style={
+            'fontSize': '20px',
+        }
+    )
+
+    cal = html.Div(
+        dcc.Markdown(ps.principle_cal,mathjax=True),
+        style={
+            'border': '2px',
+            'text-align': 'justify',    
+            #'color': 'yellow', 
+            'padding': '10px',
+            'padding-bottom': '0px'
+        }
+    )
+
+    empty=html.Div(
+        [],
+        style={
+            'height':'100px'
+        }
     )
 
     layout = html.Div(
         [
-            html.H2('干涉现象与牛顿环的形成', style={'marginTop': '15px'}),
-            dbc.Row(gen),
+            dbc.Row(intro, style={'marginTop':'15px'}),
             dbc.Row([
-                        dbc.Col([pic_light,]),
-                        dbc.Col(dcc.Markdown(ps.principle_tips_1), width=2),
-                        dbc.Col([pic_geomatric ,])
+                dbc.Col([pic_light,], width=5),
+                dbc.Col([tips_1], width=3),
+                dbc.Col([pic_geomatric,], width=4)
                     ],),
+            dbc.Row([
+                dbc.Col([empty,pic_rings,tip_3], width=5),
+                dbc.Col([tip_2,cal], width=7),
+            ]),
             html.Hr(style=ss.principle_line_style),
-            html.H2('牛顿环干涉测量透镜曲率半径'),
-            dbc.Row([
-                dbc.Col(dcc.Markdown(ps.principle_geo,mathjax=True),),
-                dbc.Col([pic_geomatric, ],),
-            ]),
-            html.Hr(),
-            dbc.Row([
-                dbc.Col(dcc.Markdown(ps.principle_opd,mathjax=True),),
-                dbc.Col(dcc.Markdown(ps.principle_interference_conditions,mathjax=True),)
-            ]),
-            html.Hr(),
-            dbc.Row(dcc.Markdown(ps.principle_method,mathjax=True))
+            # html.H2('牛顿环干涉测量透镜曲率半径'),
+            # dbc.Row([
+            #     dbc.Col(dcc.Markdown(ps.principle_geo,mathjax=True),),
+            #     dbc.Col([pic_geomatric, ],),
+            # ]),
+            # html.Hr(),
+            # dbc.Row([
+            #     dbc.Col(dcc.Markdown(ps.principle_opd,mathjax=True),),
+            #     dbc.Col(dcc.Markdown(ps.principle_interference_conditions,mathjax=True),)
+            # ]),
+            # html.Hr(),
+            # dbc.Row(dcc.Markdown(ps.principle_method,mathjax=True))
 
         ]
     )
