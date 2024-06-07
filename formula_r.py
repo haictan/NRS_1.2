@@ -26,11 +26,11 @@ def create_layout():
 
     R = refractive_index * dd_ave / (4 * m_n * wavelength)
 
-    formula_r = dcc.Markdown('$R = \\frac{n\\bar{d}}{4(j-i)\\lambda}=' + f'{R:.2f}' + 'm$', 
+    formula_r = dcc.Markdown('$R = \\frac{n\\bar{d}}{4(j-i)\\lambda}=' + f'{R:.2f}' + '\\mathrm{m}$', 
                             mathjax=True,className='mathjax'),
     
     ra = abs(R - radius_curvature)
-    formula_r_aerr = dcc.Markdown('$\\delta_a = |R-R_真|=' + f'{ra:.2f}' + 'm$', 
+    formula_r_aerr = dcc.Markdown('$\\delta_a = |R-R_真|=' + f'{ra:.2f}' + '\\mathrm{m}$', 
                             mathjax=True,className='mathjax')
     
     rr = ra / radius_curvature * 100

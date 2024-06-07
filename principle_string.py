@@ -89,7 +89,7 @@ principle_cal='''
 光从光疏介质向光密介质传播，发生反射时会产生半波损失。在平板玻璃上表面发生反射时，
 会产生$\\frac{\\lambda}{2}$的附加光程差。与接触点$O$距为$r$处的总光程差为：$\\Delta=2nd+\\frac{\\lambda}{2}$
 当光程差为半波长的奇数倍时会产生暗环：$\\Delta=(2k+1)\\frac{\\lambda}{2}$，
-当光程差为半波长的偶数倍时会产生亮环：$\\Delta = 2k \\frac{\\lambda}{2}$。设第$k$级圆环的半径为$r_k$，则  
+当光程差为半波长的偶数倍时会产生亮环：$\\Delta = 2k \\frac{\\lambda}{2}$。设第$k$级圆环的半径为$r_k$，则：  
 $$
 r_k = \\begin{cases}  
 \\sqrt{\\frac{(2k - 1)R\\lambda}{2n}} & k = 1, 2, 3, \\ldots \\text{明} &&
