@@ -48,7 +48,7 @@ function startDashProcess() {
 
 app.on('ready', () => {
     startDashProcess();
-    setTimeout(createWindow, 1000);
+    setTimeout(createWindow, 3000);
 });
 
 app.on('window-all-closed', () => {
