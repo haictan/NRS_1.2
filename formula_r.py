@@ -8,7 +8,7 @@ import datasheet_store as ds
 
 def create_layout():
 
-    wavelength = statebar.state_rings.get('wavelength')
+    wavelength = statebar.state_rings.get('wavelength') * 1e-9  #转换为米
     radius_curvature = statebar.state_rings.get('radius_curvature')
     refractive_index = statebar.state_rings.get('refractive_index')
 
@@ -22,7 +22,7 @@ def create_layout():
             diameter_dd.append(row[ds.str_rings_diameter_dd])
     
     dd_len = len(diameter_dd)
-    dd_ave = sum(diameter_dd) / dd_len
+    dd_ave = sum(diameter_dd) / dd_len * 1e-6 #转换为米平方
 
     R = refractive_index * dd_ave / (4 * m_n * wavelength)
 
