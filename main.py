@@ -31,6 +31,6 @@ menu.register_callbacks(app)
 workspace.register_callbacks(app)
 
 if __name__ == '__main__':
-    app.run_server(host='127.0.0.1', port=8080, debug=False)
+    app.run_server(host='47.99.132.61', port=8080, debug=False)
     #app.run_server(debug=True)
     #app.run_server()

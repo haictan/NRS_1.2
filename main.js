@@ -16,7 +16,7 @@ function createWindow() {
         icon: path.join(__dirname, 'assets', 'icon.png')
     });
 
-    mainWindow.loadURL('http://127.0.0.1:8050');
+    mainWindow.loadURL('http://127.0.0.1:8080');
 
     mainWindow.on('closed', () => {
         mainWindow = null;
@@ -48,7 +48,7 @@ function startDashProcess() {
 
 app.on('ready', () => {
     startDashProcess();
-    setTimeout(createWindow, 3000);
+    setTimeout(createWindow, 1000);
 });
 
 app.on('window-all-closed', () => {
