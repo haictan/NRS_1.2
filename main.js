@@ -16,7 +16,7 @@ function createWindow() {
         icon: path.join(__dirname, 'assets', 'icon.png')
     });
 
-    mainWindow.loadURL('http://127.0.0.1:8080');
+    mainWindow.loadURL('http://127.0.0.1:9411');
 
     mainWindow.on('closed', () => {
         mainWindow = null;
