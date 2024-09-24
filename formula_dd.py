@@ -33,7 +33,7 @@ def create_layout():
     Ua = math.sqrt(sum(delta_d2)/(dd_len*(dd_len-1)))
     Ua_str = f'{Ua:.3f}'
     
-    Ua_formula = dcc.Markdown('$$U_a=\\sqrt{\\frac{\\sum_{i=1}^{n}(d_i-\\bar{d})}{n(n-1)}}=' + Ua_str + '$$',
+    Ua_formula = dcc.Markdown('$$U_a=\\sqrt{\\frac{\\sum_{i=1}^{n}(d_i-\\bar{d})^2}{n(n-1)}}=' + Ua_str + '$$',
                     mathjax=True,className='mathjax'),
 
     lad = html.Div(
